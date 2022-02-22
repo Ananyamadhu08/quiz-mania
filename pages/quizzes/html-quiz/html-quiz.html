@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizzes</title>
+    <link
+      href="https://fusion-css.netlify.app/css/index.css"
+      rel="stylesheet"
+    />
+    <link href="/index.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="w-full h-20 shadow bg-slate-900 fixed z-50">
+      <div class="flex justify-around align-items-center h-full w-full">
+        <!-- header-left (logo, nav-links) -->
+        <div class="flex justify-center align-items-center">
+          <!-- Logo -->
+          <a href="/index.html">
+            <h5
+              class="h5 cursor-pointer mr-10 text-cyan-300 logo text-small text-italic inline-flex justify-center align-items-center"
+            >
+              <!-- <img src="" alt="logo" class="w-14 h-14" /> -->
+              QUIZ<span class="text-white">mania</span>
+            </h5>
+          </a>
+          <!-- Logo -->
+
+          <!-- Links -->
+          <a href="/index.html">
+            <h6 class="mr-6 cursor-pointer h6 text-cyan-300">Home</h6>
+          </a>
+          <a href="/pages/product-listing-page/product-listing-page.html">
+            <h6 class="mr-6 cursor-pointer h6 text-hover-rose-500 text-white">
+              Quizzes
+            </h6>
+          </a>
+          <!-- Links -->
+        </div>
+        <!-- header-left (logo, nav-links) -->
+
+        <!-- header middle (searchbar) -->
+        <form action="" class="search__bar__wrapper">
+          <input type="text" class="search__bar" placeholder="Search" />
+          <a href="#">
+            <i class="fas fa-search search__icon text-cyan-500"></i>
+          </a>
+        </form>
+        <!-- header middle (searchbar) -->
+
+        <!-- header right (nav-links, login/signup CTA) -->
+        <div class="flex justify-center align-items-center">
+          <!-- navigation links -->
+          <a href="/pages/wishlist-page/wishlist-page.html">
+            <span class="w-full h-full tooltip btn-icon mr-5">
+              <i
+                class="text-cyan-500 text-hover-cyan-300 fas fa-user text-3xl"
+              ></i>
+
+              <span
+                class="tooltip-text text-black text-lg tooltip-text-bottom bg-cyan-100"
+              >
+                Profile
+              </span>
+            </span>
+          </a>
+
+          <!-- login/signup CTA -->
+          <a
+            class="btn btn-square-solid btn-md text-white bg-cyan-600 btn-bg-hover-cyan-300 mr-7"
+          >
+            LOGIN
+          </a>
+
+          <!-- navigation links -->
+        </div>
+        <!-- header right (nav-links, login/signup CTA) -->
+      </div>
+    </header>
+    <!-- header -->
+
+    <div class="spacer-3rem"></div>
+    <div class="spacer-3rem"></div>
+    <div class="spacer-3rem"></div>
+    <!-- main section -->
+    <main style="top: 5rem; min-height: 100vh" class="relative w-full">
+      <div style="max-width: 980px; margin: auto" class="w-full">
+        <h3 class="text-4xl font-normal text-center text-black underline">
+          JavaScript MCQ
+        </h3>
+
+        <div class="spacer-3rem"></div>
+        <div class="spacer-3rem"></div>
+        <div class="flex justify-between align-items-center">
+          <a
+            href="/pages/quizzes/"
+            class="btn btn-sm btn-solid-cyan shadow-sm text-black text-center"
+            >Check Score</a
+          >
+
+          <div id="modal" style="z-index: 30" class="modal">
+            <div class="modal-content bg-white">
+              <div
+                class="modal-header flex justify-between align-items-center bg-grey-800 text-white p-5"
+              >
+                <h4 class="h4 text-lg">Quiz Rules</h4>
+                <span
+                  onclick="closeModal()"
+                  class="modal-close text-rose-500 text-hover-rose-300"
+                  >×</span
+                >
+              </div>
+              <div class="modal-body p-5">
+                <p>Some rules in the Modal Body</p>
+                <p>Some other rules...</p>
+                <p>Some rules in the Modal Body</p>
+                <p>Some other rules...</p>
+                <p>Some rules in the Modal Body</p>
+                <p>Some other rules...</p>
+                <p>Some rules in the Modal Body</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="spacer-3rem"></div>
+        <div class="spacer-3rem"></div>
+
+        <div class="question-wrapper">
+          <div class="flex justify-between align-items-center mb-10">
+            <div class="flex justify-center align-items-center">
+              <h6 class="mr-3 text-lg text-cyan-500 font-bold">Question:</h6>
+              <h6 class="text-lg font-normal">1/5</h6>
+            </div>
+
+            <div class="flex justify-center align-items-center">
+              <h6 class="mr-3 text-lg font-bold text-cyan-500">Score:</h6>
+              <h6 class="text-lg font-normal">0</h6>
+            </div>
+          </div>
+
+          <h5 class="text-3xl font-normal mb-10">
+            1. Javascript is an _______ language?
+          </h5>
+
+          <div style="gap: 1rem" class="flex flex-col">
+            <div
+              style="display: block"
+              class="btn shadow-md btn-outline-cyan text-center"
+            >
+              Object Oriented
+            </div>
+            <div style="display: block" class="btn shadow-md btn-outline-cyan">
+              Object Based
+            </div>
+            <div style="display: block" class="btn shadow-md btn-outline-cyan">
+              Procedural
+            </div>
+            <div style="display: block" class="btn shadow-md btn-outline-cyan">
+              None of the above
+            </div>
+          </div>
+        </div>
+
+        <div class="spacer-3rem"></div>
+        <div class="spacer-3rem"></div>
+        <div class="spacer-3rem"></div>
+
+        <div class="question-wrapper">
+          <div class="flex justify-between align-items-center mb-10">
+            <div class="flex justify-center align-items-center">
+              <h6 class="mr-3 text-lg text-cyan-500 font-bold">Question:</h6>
+              <h6 class="text-lg font-normal">2/5</h6>
+            </div>
+
+            <div class="flex justify-center align-items-center">
+              <h6 class="mr-3 text-lg font-bold text-cyan-500">Score:</h6>
+              <h6 class="text-lg font-normal">0</h6>
+            </div>
+          </div>
+
+          <h5 class="text-3xl font-normal mb-10">
+            2. Which of the following keywords is used to define a variable in
+            Javascript?
+          </h5>
+
+          <div style="gap: 1rem" class="flex flex-col">
+            <div
+              style="display: block"
+              class="btn shadow-md btn-outline-cyan text-center"
+            >
+              var
+            </div>
+            <div style="display: block" class="btn shadow-md btn-outline-cyan">
+              let
+            </div>
+            <div style="display: block" class="btn shadow-md btn-outline-cyan">
+              Both A And B
+            </div>
+            <div style="display: block" class="btn shadow-md btn-outline-cyan">
+              None of the above
+            </div>
+          </div>
+        </div>
+        <div class="spacer-3rem"></div>
+        <div class="spacer-3rem"></div>
+        <div class="spacer-3rem"></div>
+
+        <div class="question-wrapper">
+          <div class="flex justify-between align-items-center mb-10">
+            <div class="flex justify-center align-items-center">
+              <h6 class="mr-3 text-lg text-cyan-500 font-bold">Question:</h6>
+              <h6 class="text-lg font-normal">3/5</h6>
+            </div>
+
+            <div class="flex justify-center align-items-center">
+              <h6 class="mr-3 text-lg font-bold text-cyan-500">Score:</h6>
+              <h6 class="text-lg font-normal">0</h6>
+            </div>
+          </div>
+
+          <h5 class="text-3xl font-normal mb-10">
+            3. Which of the following methods is used to access HTML elements
+            using Javascript?
+          </h5>
+
+          <div style="gap: 1rem" class="flex flex-col">
+            <div
+              style="display: block"
+              class="btn shadow-md btn-outline-cyan text-center"
+            >
+              Both B and C
+            </div>
+            <div style="display: block" class="btn shadow-md btn-outline-cyan">
+              getElementById()
+            </div>
+            <div style="display: block" class="btn shadow-md btn-outline-cyan">
+              getElementsByClassName()
+            </div>
+            <div style="display: block" class="btn shadow-md btn-outline-cyan">
+              None of the above
+            </div>
+          </div>
+        </div>
+        <div class="spacer-3rem"></div>
+        <div class="spacer-3rem"></div>
+        <div class="spacer-3rem"></div>
+
+        <div class="question-wrapper">
+          <div class="flex justify-between align-items-center mb-10">
+            <div class="flex justify-center align-items-center">
+              <h6 class="mr-3 text-lg text-cyan-500 font-bold">Question:</h6>
+              <h6 class="text-lg font-normal">4/5</h6>
+            </div>
+
+            <div class="flex justify-center align-items-center">
+              <h6 class="mr-3 text-lg font-bold text-cyan-500">Score:</h6>
+              <h6 class="text-lg font-normal">0</h6>
+            </div>
+          </div>
+
+          <h5 class="text-3xl font-normal mb-10">
+            4. Upon encountering empty statements, what does the Javascript
+            Interpreter do?
+          </h5>
+
+          <div style="gap: 1rem" class="flex flex-col">
+            <div
+              style="display: block"
+              class="btn shadow-md btn-outline-cyan text-center"
+            >
+              Throws an error
+            </div>
+            <div style="display: block" class="btn shadow-md btn-outline-cyan">
+              Ignores the statements
+            </div>
+            <div style="display: block" class="btn shadow-md btn-outline-cyan">
+              Gives a warning
+            </div>
+            <div style="display: block" class="btn shadow-md btn-outline-cyan">
+              None of the above
+            </div>
+          </div>
+        </div>
+        <div class="spacer-3rem"></div>
+        <div class="spacer-3rem"></div>
+        <div class="spacer-3rem"></div>
+
+        <div class="question-wrapper">
+          <div class="flex justify-between align-items-center mb-10">
+            <div class="flex justify-center align-items-center">
+              <h6 class="mr-3 text-lg text-cyan-500 font-bold">Question:</h6>
+              <h6 class="text-lg font-normal">5/5</h6>
+            </div>
+
+            <div class="flex justify-center align-items-center">
+              <h6 class="mr-3 text-lg font-bold text-cyan-500">Score:</h6>
+              <h6 class="text-lg font-normal">0</h6>
+            </div>
+          </div>
+
+          <h5 class="text-3xl font-normal mb-10">
+            5. Which of the following methods can be used to display data in
+            some form using Javascript?
+          </h5>
+
+          <div style="gap: 1rem" class="flex flex-col">
+            <div
+              style="display: block"
+              class="btn shadow-md btn-outline-cyan text-center"
+            >
+              document.write()
+            </div>
+            <div style="display: block" class="btn shadow-md btn-outline-cyan">
+              console.log()
+            </div>
+            <div style="display: block" class="btn shadow-md btn-outline-cyan">
+              window.alert()
+            </div>
+            <div style="display: block" class="btn shadow-md btn-outline-cyan">
+              All of the above
+            </div>
+          </div>
+        </div>
+
+        <div class="spacer-3rem"></div>
+        <div class="spacer-3rem"></div>
+
+        <a
+          href="/pages/quizzes/javascript-quiz/js-quiz-result-page.html"
+          class="btn btn-sm btn-solid-cyan shadow-sm text-black text-center"
+          >Check Score</a
+        >
+      </div>
+    </main>
+    <!-- main -->
+    <!-- main section -->
+
+    <div class="spacer-3rem"></div>
+    <div class="spacer-3rem"></div>
+    <div class="spacer-3rem"></div>
+    <div class="spacer-3rem"></div>
+
+    <!-- footer -->
+    <footer
+      class="relative flex flex-col h-44 justify-center align-items-center w-full p-5 z-50 bg-cyan-200"
+      style="bottom: 0"
+    >
+      <div class="text-grey-700">
+        Made with
+        <span class="text-cyan-700 font-bold ml-1 mr-1">&lt;/&gt;</span> by
+
+        <a class="ml-1 text-hover-cyan-600">Ananya</a>
+      </div>
+      <div class="flex mt-3 align-items-center justify-center">
+        <a href="https://github.com/Ananyamadhu08" target="_blank">
+          <i class="fab fa-github mr-2 text-cyan-700"></i>
+        </a>
+        <a href="https://twitter.com/AnanyaMadhu27" target="_blank">
+          <i class="fab fa-twitter mr-2 text-cyan-700"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ananya-madhu-74479b206/"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin mr-2 text-cyan-700"></i>
+        </a>
+      </div>
+
+      <div class="text-grey-700 mt-5">
+        Designed using
+
+        <a class="text-hover-cyan-600">Fusion CSS</a>
+      </div>
+    </footer>
+    <!-- footer -->
+
+    <script>
+      var modal = document.querySelector("#modal");
+
+      var modalBtn = document.querySelector("#modal-btn");
+
+      var closeBtn = document.querySelector(".modal-close-btn");
+      console.log(closeBtn);
+
+      modalBtn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
