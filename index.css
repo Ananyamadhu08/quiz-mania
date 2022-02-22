@@ -20,7 +20,7 @@
   color: var(--white);
 }
 .search__bar:focus {
-  border: 2px solid var(--rose-500);
+  border: 2px solid var(--cyan-500);
   transition: 0.2s ease;
 }
 .search__bar:focus::-webkit-input-placeholder {
