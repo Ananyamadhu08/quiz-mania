@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz Mania</title>
+    <title>Login Page</title>
     <link
       href="https://fusion-css.netlify.app/css/index.css"
       rel="stylesheet"
@@ -35,14 +35,16 @@
               class="h5 cursor-pointer mr-10 text-cyan-300 logo text-small text-italic inline-flex justify-center align-items-center"
             >
               <!-- <img src="" alt="logo" class="w-14 h-14" /> -->
-              QUIZ<span class="text-white">mania</span>
+              Fusion
             </h5>
           </a>
           <!-- Logo -->
 
           <!-- Links -->
           <a href="/index.html">
-            <h6 class="mr-6 cursor-pointer h6 text-cyan-300">Home</h6>
+            <h6 class="mr-6 cursor-pointer h6 text-hover-cyan-300 text-white">
+              Home
+            </h6>
           </a>
           <a href="/pages/quiz.html">
             <h6 class="mr-6 cursor-pointer h6 text-hover-cyan-300 text-white">
@@ -65,7 +67,7 @@
         <!-- header right (nav-links, login/signup CTA) -->
         <div class="flex justify-center align-items-center">
           <!-- navigation links -->
-          <a href="/">
+          <a href="/pages/wishlist-page/wishlist-page.html">
             <span class="w-full h-full tooltip btn-icon mr-5">
               <i
                 class="text-cyan-500 text-hover-cyan-300 fas fa-user text-3xl"
@@ -82,7 +84,6 @@
           <!-- login/signup CTA -->
           <a
             class="btn btn-square-solid btn-md text-white bg-cyan-600 btn-bg-hover-cyan-300 mr-7"
-            href="/pages/login-signup-page/login-page.html"
           >
             LOGIN
           </a>
@@ -95,28 +96,60 @@
     <!-- header -->
 
     <!-- main section -->
-    <main
-      class="relative w-full flex align-items-center justify-center"
-      style="top: 5rem; min-height: 100vh"
-    >
-      <div style="max-width: 980px; margin: auto">
-        <div class="flex flex-col justify-center mb-10">
-          <h2 class="mb-10 text-8xl text-cyan-600">Quiz Mania</h2>
-
-          <h5 class="text-xl">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
-            <br />
-            pariatur dignissimos. Optio vitae sequi reiciendis asperiores
-            cumque. repellendus unde aperiam incidunt quibusdam architecto
-            blanditiis eligendi ad ipsum voluptate, quidem odit.
-          </h5>
-        </div>
-
-        <a
-          class="btn btn-square-solid bg-cyan-600 text-white"
-          href="/pages/quiz.html"
-          >Find Quizzes</a
+    <main class="relative w-full" style="top: 5rem; min-height: 100vh">
+      <div class="h-screen flex justify-center">
+        <div
+          style="margin: auto"
+          class="h=96 w-96 p-10 shadow-2xl rounded-2xl bg-cyan-700"
         >
+          <h3 class="text-3xl font-normal text-center text-white mb-20">
+            Login
+          </h3>
+
+          <div class="input-container mb-7">
+            <input
+              type="text"
+              id="email"
+              class="input input-white-hover input-blue-focus"
+              autocomplete="off"
+              placeholder=" "
+            />
+            <label for="email" class="input-label bg-cyan-700 text-white"
+              >Email</label
+            >
+          </div>
+
+          <div class="input-container mb-7">
+            <input
+              type="text"
+              id="email"
+              class="input input-white-hover input-blue-focus"
+              autocomplete="off"
+              placeholder=" "
+            />
+            <label for="email" class="input-label text-white bg-cyan-700"
+              >Password</label
+            >
+          </div>
+
+          <div class="flex justify-between mb-10">
+            <div class="flex justify-center align-items-center">
+              <input type="checkbox" class="mr-3" name="" id="" />
+              <h6 class="text-lg text-white font-normal">Remember me</h6>
+            </div>
+            <a
+              href="/pages/login-signup-page/signup-page.html"
+              class="btn btn-text-underline text-white"
+              >Sign Up</a
+            >
+          </div>
+
+          <div>
+            <a href="" class="btn btn-link-cyan text-white"
+              >Forgot Password ?</a
+            >
+          </div>
+        </div>
       </div>
     </main>
     <!-- main section -->
@@ -155,7 +188,7 @@
       <div class="text-grey-700 mt-5">
         Designed using
 
-        <a class="text-hover-cyan-600">Fusion CSS</a>
+        <a class="text-hover-rose-600">Fusion CSS</a>
       </div>
     </footer>
     <!-- footer -->
