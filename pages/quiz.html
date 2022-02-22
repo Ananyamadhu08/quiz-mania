@@ -4,7 +4,330 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Quizzes</title>
+    <link
+      href="https://fusion-css.netlify.app/css/index.css"
+      rel="stylesheet"
+    />
+    <link href="/index.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <!-- header -->
+    <header class="w-full h-20 shadow bg-slate-900 fixed z-50">
+      <div class="flex justify-around align-items-center h-full w-full">
+        <!-- header-left (logo, nav-links) -->
+        <div class="flex justify-center align-items-center">
+          <!-- Logo -->
+          <a href="/index.html">
+            <h5
+              class="h5 cursor-pointer mr-10 text-cyan-300 logo text-small text-italic inline-flex justify-center align-items-center"
+            >
+              <!-- <img src="" alt="logo" class="w-14 h-14" /> -->
+              QUIZ<span class="text-white">mania</span>
+            </h5>
+          </a>
+          <!-- Logo -->
+
+          <!-- Links -->
+          <a href="/index.html">
+            <h6 class="mr-6 cursor-pointer h6 text-cyan-300">Home</h6>
+          </a>
+          <a href="/pages/product-listing-page/product-listing-page.html">
+            <h6 class="mr-6 cursor-pointer h6 text-hover-rose-500 text-white">
+              Quizzes
+            </h6>
+          </a>
+          <!-- Links -->
+        </div>
+        <!-- header-left (logo, nav-links) -->
+
+        <!-- header middle (searchbar) -->
+        <form action="" class="search__bar__wrapper">
+          <input type="text" class="search__bar" placeholder="Search" />
+          <a href="#">
+            <i class="fas fa-search search__icon text-cyan-500"></i>
+          </a>
+        </form>
+        <!-- header middle (searchbar) -->
+
+        <!-- header right (nav-links, login/signup CTA) -->
+        <div class="flex justify-center align-items-center">
+          <!-- navigation links -->
+          <a href="/pages/wishlist-page/wishlist-page.html">
+            <span class="w-full h-full tooltip btn-icon mr-5">
+              <i
+                class="text-cyan-500 text-hover-cyan-300 fas fa-user text-3xl"
+              ></i>
+
+              <span
+                class="tooltip-text text-black text-lg tooltip-text-bottom bg-cyan-100"
+              >
+                Profile
+              </span>
+            </span>
+          </a>
+
+          <!-- login/signup CTA -->
+          <a
+            class="btn btn-square-solid btn-md text-white bg-cyan-600 btn-bg-hover-cyan-300 mr-7"
+          >
+            LOGIN
+          </a>
+
+          <!-- navigation links -->
+        </div>
+        <!-- header right (nav-links, login/signup CTA) -->
+      </div>
+    </header>
+    <!-- header -->
+
+    <!-- main section -->
+    <main
+      class="relative w-full flex align-items-center justify-center"
+      style="top: 5rem; min-height: 100vh"
+    >
+      <div class="flex flex-col justify-center">
+        <div class="flex w-full justify-start">
+          <div class="text-xl text-black mr-3">Sort By</div>
+          <div class="custom-select mr-3">
+            <select class="bg-cyan-400 text-white text-xl">
+              <option selected disabled>Choose a filter</option>
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="gap: 10rem; max-width: 980px" class="grid grid-cols-3 p-20">
+          <div
+            class="shadow-lg rounded flex flex-col relative w-72 mb-12 ml-12 mr-5"
+          >
+            <div class="h-72">
+              <img
+                class="img-responsive rounded"
+                style="height: 100%"
+                src="https://picsum.photos/200"
+                alt="dress"
+              />
+              <div class="px-4 py-2 text-badge card-badge bg-indigo-300">
+                new
+              </div>
+            </div>
+
+            <div class="p-3">
+              <h3 class="text-grey-600 subtitle1 mb-2">Quiz title</h3>
+
+              <div class="flex justify-between">
+                <a
+                  href=""
+                  class="btn btn-square-solid btn-xs bg-indigo-500 text-white mr-3"
+                >
+                  play quiz
+                </a>
+                <a
+                  id="modal-btn"
+                  class="btn btn-square-solid btn-xs bg-indigo-500 text-white"
+                >
+                  quiz rules
+                </a>
+
+                <div id="modal" class="modal p-20">
+                  <div class="modal-cont bg-grey-400">
+                    <span
+                      class="modal-close-btn close-btn text-slate-700 text-hover-white fas fa-times"
+                    ></span>
+                    <h2>quiz rules</h2>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Fugiat, veniam amet vel iure nulla expedita quisquam nisi
+                      neque repellendus temporibus consectetur eaque fugit
+                      asperiores aut dicta iusto aspernatur ipsum libero?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="shadow-lg rounded flex flex-col relative w-72 mb-12 ml-12 mr-5"
+          >
+            <div class="h-72">
+              <img
+                class="img-responsive rounded"
+                style="height: 100%"
+                src="https://picsum.photos/200"
+                alt="dress"
+              />
+              <div class="px-4 py-2 text-badge card-badge bg-indigo-300">
+                new
+              </div>
+            </div>
+
+            <div class="p-3">
+              <h3 class="text-grey-600 subtitle1 mb-2">Quiz title</h3>
+
+              <div class="flex justify-between">
+                <a
+                  href=""
+                  class="btn btn-square-solid btn-xs bg-indigo-500 text-white mr-3"
+                >
+                  play quiz
+                </a>
+                <a
+                  id="modal-btn"
+                  class="btn btn-square-solid btn-xs bg-indigo-500 text-white"
+                >
+                  quiz rules
+                </a>
+
+                <div id="modal" class="modal p-20">
+                  <div class="modal-cont bg-grey-400">
+                    <span
+                      class="modal-close-btn close-btn text-slate-700 text-hover-white fas fa-times"
+                    ></span>
+                    <h2>quiz rules</h2>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Fugiat, veniam amet vel iure nulla expedita quisquam nisi
+                      neque repellendus temporibus consectetur eaque fugit
+                      asperiores aut dicta iusto aspernatur ipsum libero?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="shadow-lg rounded flex flex-col relative w-72 mb-12 ml-12 mr-5"
+          >
+            <div class="h-72">
+              <img
+                class="img-responsive rounded"
+                style="height: 100%"
+                src="https://picsum.photos/200"
+                alt="dress"
+              />
+              <div class="px-4 py-2 text-badge card-badge bg-indigo-300">
+                new
+              </div>
+            </div>
+
+            <div class="p-3">
+              <h3 class="text-grey-600 subtitle1 mb-2">Quiz title</h3>
+
+              <div class="flex justify-between">
+                <a
+                  href=""
+                  class="btn btn-square-solid btn-xs bg-indigo-500 text-white mr-3"
+                >
+                  play quiz
+                </a>
+                <a
+                  id="modal-btn"
+                  class="btn btn-square-solid btn-xs bg-indigo-500 text-white"
+                >
+                  quiz rules
+                </a>
+
+                <div id="modal" class="modal p-20">
+                  <div class="modal-cont bg-grey-400">
+                    <span
+                      class="modal-close-btn close-btn text-slate-700 text-hover-white fas fa-times"
+                    ></span>
+                    <h2>quiz rules</h2>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Fugiat, veniam amet vel iure nulla expedita quisquam nisi
+                      neque repellendus temporibus consectetur eaque fugit
+                      asperiores aut dicta iusto aspernatur ipsum libero?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- main section -->
+
+    <div class="spacer-3rem"></div>
+    <div class="spacer-3rem"></div>
+    <div class="spacer-3rem"></div>
+    <div class="spacer-3rem"></div>
+
+    <!-- footer -->
+    <footer
+      class="relative flex flex-col h-44 justify-center align-items-center w-full p-5 z-50 bg-cyan-200"
+      style="bottom: 0"
+    >
+      <div class="text-grey-700">
+        Made with
+        <span class="text-cyan-700 font-bold ml-1 mr-1">&lt;/&gt;</span> by
+
+        <a class="ml-1 text-hover-cyan-600">Ananya</a>
+      </div>
+      <div class="flex mt-3 align-items-center justify-center">
+        <a href="https://github.com/Ananyamadhu08" target="_blank">
+          <i class="fab fa-github mr-2 text-cyan-700"></i>
+        </a>
+        <a href="https://twitter.com/AnanyaMadhu27" target="_blank">
+          <i class="fab fa-twitter mr-2 text-cyan-700"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ananya-madhu-74479b206/"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin mr-2 text-cyan-700"></i>
+        </a>
+      </div>
+
+      <div class="text-grey-700 mt-5">
+        Designed using
+
+        <a class="text-hover-cyan-600">Fusion CSS</a>
+      </div>
+    </footer>
+    <!-- footer -->
+
+    <script>
+      var modal = document.querySelector("#modal");
+
+      var modalBtn = document.querySelector("#modal-btn");
+
+      var closeBtn = document.querySelector(".modal-close-btn");
+      console.log(closeBtn);
+
+      modalBtn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
 </html>
